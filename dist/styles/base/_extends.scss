@@ -1,0 +1,26 @@
+// Extends
+%input {
+  @include font-roman;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid color('cool-grey', 10);
+  padding: .3em .8em .2em 0;
+  font-size: 1rem;
+  box-shadow: none;
+  color: color('cool-grey', 60);
+  outline: none;
+
+  &.ng-dirty.invalid {
+    border-bottom: 2px solid color('red', 50);
+  }
+
+  &:hover {
+    border-bottom: 2px solid color('cool-grey', 30);
+  }
+
+  &:focus {
+    border-bottom: 2px solid $primary-color;
+    color: color('cool-gray', 90);
+  }
+}

@@ -1,0 +1,57 @@
+// Animations
+.watson {
+  &.animate {
+    .main-container.ng-enter,
+    .main-container.ng-leave {
+      position: absolute;
+      top: $banner-height;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100vw;
+      height: calc(100vh - #{$banner-height});
+
+      @include screen-medium {
+        top: 1.5 * $banner-height;
+        height: calc(100vh - 1.5 * #{$banner-height});
+      }
+    }
+
+    .main-container.ng-enter {
+      transition: opacity .5s linear;
+      opacity: 0;
+    }
+
+    .main-container.ng-enter-active {
+      opacity: 1;
+    }
+
+    .main-container.ng-leave {
+      opacity: 1;
+    }
+
+    .main-container.ng-leave-active {
+      opacity: 0;
+    }
+
+  }
+
+  .no-animation {
+    transition-duration: 0s;
+  }
+
+  .fade {
+    transition: opacity .5s ease;
+
+    &.ng-hide {
+      opacity: 0;
+    }
+  }
+
+  .flip {
+    transform: rotate3d(1, 0, 0, 180deg);
+    transform-origin: 50% 50%;
+  }
+}

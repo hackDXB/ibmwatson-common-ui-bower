@@ -1,0 +1,108 @@
+// Tags
+.watson {
+  .tag {
+    @include tag();
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &.invalid {
+      border: 2px solid $red-50;
+    }
+
+    &:hover {
+      border: 1px solid color('cool-gray', 70);
+      color: color('cool-gray', 70);
+
+      &.invalid {
+        border: 2px solid $red-50;
+        > * + * {
+         border-left: 2px solid $red-50;
+        }
+      }
+
+      > * + * {
+        border-left: 1px solid color('cool-gray', 70);
+      }
+
+    }
+
+    &:focus, &:active {
+      border: 1px solid color('teal', 40);
+      color: color('teal', 40);
+      &.invalid {
+        border: 2px solid $red-50;
+        > * + * {
+          border-left: 2px solid $red-50;
+        }
+      }
+
+      > * + * {
+        border-left: 1px solid color('teal', 40);
+      }
+    }
+
+    &.small {
+      line-height: 18px;
+      height: 20px;
+      max-width: 250px;
+      font-weight: bold;
+      font-size: 0.8em;
+    }
+
+    &.confidence {
+      border: 1px solid color('cool-gray', 20);
+      color: color('purple', 50);
+
+      &.invalid {
+        border: 2px solid $red-50;
+
+        > * + * {
+          border-left: 2px solid $red-50;
+        }
+      }
+
+      &:hover {
+        border: 1px solid color('cool-gray', 70);
+        color: color('cool-gray', 70);
+
+        &.invalid {
+          border: 2px solid $red-50;
+
+          > * + * {
+            border-left: 2px solid $red-50;
+          }
+        }
+
+        > * + * {
+          border-left: 1px solid color('cool-gray', 70);
+        }
+      }
+
+      &:focus, &:active {
+        border: 1px solid color('purple', 60);
+        color: color('purple', 60);
+        &.invalid {
+          border: 2px solid $red-50;
+
+          > * + * {
+            border-left: 2px solid $red-50;
+          }
+        }
+
+        > * + * {
+          border-left: 1px solid color('purple', 40);
+        }
+      }
+    }
+    > * {
+      display: inline-block;
+
+      & + * {
+        border-left: 1px solid color('cool-gray', 20);
+        margin-left: .5em;
+        padding-left: .5em;
+      }
+    }
+  }
+}

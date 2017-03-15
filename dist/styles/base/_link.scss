@@ -1,0 +1,53 @@
+// Links
+.watson {
+	a,
+	a:visited {
+		color: $primary-color;
+		text-decoration: none;
+		cursor: pointer;
+
+		&:hover {
+			border-bottom: 2px solid $primary-highlight-color;
+			text-decoration: none;
+			color: $primary-highlight-color;
+		}
+
+		&:active,
+		&:focus {
+			outline: 1px dotted color('gray', 40);
+			border-bottom: 2px solid $primary-deepen-color;
+			text-decoration: none;
+			color: $primary-deepen-color;
+		}
+
+		&.gray {
+			color: $secondary-color;
+
+			&:hover {
+				color: $secondary-highlight-color;
+				border-bottom: 2px solid $secondary-highlight-color;
+			}
+
+			&:active,
+			&:focus {
+				color: $secondary-deepen-color;
+				border-bottom: 2px solid $secondary-deepen-color;
+			}
+		}
+
+		&.purple {
+			color: $watson-color;
+
+			&:hover {
+				color: $watson-highlight-color;
+				border-bottom: 2px solid $watson-highlight-color;
+			}
+
+			&:active,
+			&:focus {
+				color: $watson-deepen-color;
+				border-bottom: 2px solid $watson-deepen-color;
+			}
+		}
+	}
+}

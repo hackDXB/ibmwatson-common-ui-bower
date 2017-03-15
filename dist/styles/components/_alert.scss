@@ -1,0 +1,57 @@
+// Alerts
+.watson {
+  .notifications {
+    position: fixed;
+    top: $banner-height;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: $z-index-alert;
+
+    @include screen-medium {
+      top: 1.5 * $banner-height;
+    }
+
+    &.ng-hide .alert {
+      top: -$banner-height * 2;
+
+      @include screen-medium {
+        top: (1.5 * -$banner-height) * 2;
+      }
+    }
+  }
+
+  .alert {
+    position: relative;
+    top: 0;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: color('cool-gray', 60);
+    color: color('white');
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+    border-radius: 0 0 4px 4px;
+    padding: 0 1em;
+    line-height: 40px;
+    @include transition(top);
+
+    @include screen-smedium {
+      width: 100vw;
+    }
+
+    & > button {
+      float: right;
+      margin: 0;
+      padding: 0;
+      font-size: 1.5em;
+      line-height: 35px;
+      min-width: 0;
+      color: color('white');
+    }
+
+    &::after {
+      content: '';
+      clear: both;
+    }
+  }
+}

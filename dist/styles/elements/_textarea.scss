@@ -1,0 +1,28 @@
+// Textareas
+.watson {
+	textarea {
+		@extend %input;
+		resize: none;
+		width: 100%;
+
+		&.code {
+			background-color: color('cool-gray', 70);
+    	color: color('white');
+
+	    &:hover,
+	    &:focus {
+	      border-color: color('purple', 50);
+	    }
+
+	    &.invalid {
+	      border-color: color('red', 50);
+	    }
+	  }
+	}
+
+	.dark-theme {
+		textarea {
+			color: color('white');
+		}
+	}
+}

@@ -1,0 +1,56 @@
+// Variables
+
+// Typography
+$ibm-watson-fonts-path: "../fonts" !default;
+$font: 'Helvetica Neue for IBM', Helvetica, Arial, 'Roboto', sans-serif;
+$font-code: 'Source Code Pro', "Lucida Console", "Andale Mono", monospace;
+
+// Images
+$ibm-watson-images-path: "../images" !default;
+
+// Border color
+$border-color-darkest: color('gray', 90);
+$border-color-dark: color('gray', 70);
+$border-color-medium: color('gray', 50);
+$border-color-light: color('gray', 20);
+$border-color-lightest: color('gray', 10);
+
+// Border width
+$border-width-large: 8px;
+$border-width-medium: 4px;
+$border-width-small: 1px;
+
+// Alert border colors
+$border-color-success: color('green', 50);
+$border-color-info: color('blue', 50);
+$border-color-warning: color('yellow', 30);
+$border-color-error: color('red', 50);
+
+// Alert background colors
+$bg-color-success: color('green', 10);
+$bg-color-info: color('blue', 10);
+$bg-color-warning: color('yellow', 10);
+$bg-color-error: color('red', 10);
+
+// Sizes
+$banner-height: 56px;
+$footer-height: 50px;
+$banner-border-width: 1px;
+$sidenav-width: 60px;
+$nav-menu-width: 250px;
+
+// z-indices
+$z-index-tooltip: 1030;
+$z-index-modal: 1050;
+$z-index-modal-backdrop: 1040;
+$z-index-alert: 1060;
+$z-index-banner: 1010;
+$z-index-dropdown: 1000;
+
+// Spacing
+$space-xsmall: 2px;
+$space-small: 4px;
+$space-smedium: 8px;
+$space-medium: 16px;
+$space-large: 32px;
+$space-xlarge: 64px;

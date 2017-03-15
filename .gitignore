@@ -1,0 +1,11 @@
+.DS_Store
+bower_components
+node_modules
+.idea
+.publish
+public
+*.log
+coverage
+TESTS-PhantomJS_*_(Linux_0.0.0).xml
+TESTS-PhantomJS_*.xml
+/.history

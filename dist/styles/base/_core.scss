@@ -1,0 +1,70 @@
+// Core
+body.watson {
+  @include font-roman;
+  margin: 0;
+  color: $primary-text-color;
+  background-color: $primary-background-color;
+}
+
+.watson * {
+  box-sizing: border-box;
+}
+
+.watson {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  #body-content {
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  &.dark-theme,
+  .dark-theme {
+    background-color: $secondary-background-color;
+    color: $secondary-text-color;
+  }
+
+  .main-container {
+    display: flex;
+  }
+
+  [role=main] {
+    padding: 1.2em;
+    flex: 1;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  .display-inline {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .align-top {
+    vertical-align: top;
+  }
+
+  .align-middle {
+    vertical-align: middle;
+  }
+
+  .no-animation {
+    transition-duration: 0s;
+  }
+
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+}

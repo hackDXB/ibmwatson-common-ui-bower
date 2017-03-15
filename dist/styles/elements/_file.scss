@@ -1,0 +1,64 @@
+// File upload
+.watson {
+  .file-upload {
+    border: 1px solid color('cool-gray', 40);
+    border-radius: 0.25em;
+    margin-bottom: 1em;
+    vertical-align: middle;
+    color: color('cool-gray', 60);
+    font-size: .9em;
+    overflow: hidden;
+    position: relative;
+
+    @include transition(all);
+
+    input[type=file] {
+      @include font-roman;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    &::before {
+      border-right: 1px solid color('cool-gray', 40);
+      text-align: left;
+      content: attr(title);
+      font-weight: bold;
+      padding: 1em;
+      display: inline-block;
+      text-align: left;
+    }
+
+    &::after {
+      content: attr(file-name);
+      font-style: italic;
+      padding: 1em;
+      display: inline-block;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:hover::after,
+    &:focus::after {
+      color: color('gray', 80);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: color('green', 10);
+      border: 1px solid color('cool-gray', 40);
+      color: color('gray', 80);
+    }
+  }
+
+  .dark-theme {
+    .file-upload {
+      color: color('gray', 10);
+    }
+  }
+}

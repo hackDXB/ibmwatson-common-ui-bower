@@ -1,0 +1,25 @@
+{
+  "name": "ibmwatson-common-ui-bower",
+  "version": "0.1.0",
+  "description": "Bower ditribution of IBM Watson Common UI ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackDXB/ibmwatson-common-ui-bower.git"
+  },
+  "keywords": [
+    "ibm",
+    "watson",
+    "ui",
+    "bower"
+  ],
+  "author": "mchebib",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hackDXB/ibmwatson-common-ui-bower/issues"
+  },
+  "homepage": "https://github.com/hackDXB/ibmwatson-common-ui-bower#readme"
+}

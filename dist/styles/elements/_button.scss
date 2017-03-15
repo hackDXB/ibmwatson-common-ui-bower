@@ -1,0 +1,316 @@
+// Buttons
+.watson {
+  button {
+    @include font-roman;
+    position: relative;
+    font-size: 1em;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    margin: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    box-shadow: none;
+    line-height: 1.6em;
+    cursor: pointer;
+
+    @include transition(all);
+
+    &:focus {
+      outline: 1px dotted color('gray', 40);
+    }
+
+    & + button {
+      margin-left: 1em;
+    }
+
+    h1 {
+      display: inline;
+      margin-right: .5em;
+    }
+
+    &:not(.link) {
+      min-width: 120px;
+    }
+
+    &[disabled],
+    &[disabled]:hover {
+      opacity: .65;
+      cursor: not-allowed;
+    }
+
+    &.primary {
+      background-color: $primary-color;
+      color: color('white');
+      border-radius: 20px;
+
+      &:hover {
+        background-color: $primary-highlight-color;
+      }
+      &.active, &:active, &:focus {
+        background-color: $primary-deepen-color;
+      }
+
+      &[disabled], &[disabled]:hover {
+        background-color: $disabled-background-color;
+      }
+
+      [class^="ibm-icon--"]:last-child,
+      [class^="ibm-glyph--"]:last-child {
+        position: absolute;
+        right: 3px;
+        top: 3px;
+      }
+
+      &.add {
+        padding-right: 3em;
+
+        &::after {
+          content: "\e608";
+          font-family: ibm-icons;
+          font-size: 1.5em;
+          position: absolute;
+          right: 5px;
+        }
+      }
+
+      &.import {
+        padding-right: 3em;
+
+        &::after {
+          content: "\e62b";
+          font-family: "ibm-icons";
+          font-size: 0.85em;
+          position: absolute;
+          right: 0.5em;
+        }
+      }
+    }
+
+
+    &.secondary {
+      background-color: $secondary-color;
+      color: color('white');
+      border-radius: 20px;
+
+      &:hover {
+        background-color: $secondary-highlight-color;
+      }
+      &.active, &:active, &:focus {
+        background-color: $secondary-deepen-color;
+      }
+
+      &[disabled], &[disabled]:hover {
+        background-color: $disabled-background-color;
+      }
+    }
+
+    &.link,
+    &.icon,
+    &.close {
+      background-color: transparent;
+      color: $primary-color;
+      min-width: 0;
+      padding: 0;
+
+      &:hover{
+        color: $primary-highlight-color;
+        background-color: transparent;
+        border: 1px solid transparent;
+      }
+
+      &:focus,
+      &.active,
+      &:active {
+        color: $primary-deepen-color;
+        background-color: transparent;
+        border: 1px solid transparent;
+      }
+
+      &[disabled], &[disabled]:hover {
+        background-color: transparent;
+        color: $disabled-background-color;
+      }
+
+      [class^="ibm-icon--"],
+      [class^="ibm-glyph--"] {
+        color: inherit;
+      }
+    }
+
+    &.link {
+      color: $primary-color;
+
+      [class^="ibm-glyph--"],
+      [class^="ibm-icon--"] {
+        &:first-child {
+          margin-right: 0.5rem;
+        }
+      }
+
+      &.add {
+        padding-left: 2em;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          content: "\e608";
+          font-family: ibm-icons;
+          font-size: 1.5em;
+        }
+      }
+
+      &.import {
+        padding-left: 1.5em;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          content: "\e62b";
+          font-family: "ibm-icons";
+          font-size: 0.85em;
+        }
+      }
+    }
+
+    &.delete {
+      background-color: color('red', 50);
+      color: color('white');
+      border-radius: 20px;
+
+      &:hover {
+        background-color: color('red', 60);
+      }
+      &.active, &:active, &:focus {
+        background-color: color('red', 70);
+      }
+
+      &[disabled], &[disabled]:hover {
+        background-color: $disabled-background-color;
+      }
+    }
+
+    &.large {
+      font-size: 1.25em;
+    }
+
+    &.small {
+      padding: .4em .8em;
+      font-size: 0.8em;
+    }
+  }
+
+  .dark-theme {
+    button.icon,
+    button.link {
+      color: color('teal', 30);
+
+      &:hover,
+      &:focus {
+        color: color('teal', 40);
+      }
+    }
+  }
+
+  // .dark-theme {
+  //   button {
+  //     &.primary {
+  //       background-color: $primary-color-50;
+  //       color: color('white');
+  //
+  //       &:hover {
+  //         background-color: $primary-color-40;
+  //       }
+  //       &:active, &:focus {
+  //         background-color: $cool-gray-30;
+  //       }
+  //
+  //       &[disabled], &[disabled]:hover {
+  //         background-color: $cool-gray-20;
+  //       }
+  //     }
+  //
+  //     &.secondary {
+  //       background-color: transparent;
+  //       border: solid 1px $primary-color-20;
+  //       color: $primary-color-20;
+  //
+  //       &:hover {
+  //         border-color: $cool-gray-20;
+  //         color: $cool-gray-20;
+  //       }
+  //       &:active, &:focus {
+  //         border-color: color('white');
+  //         color: color('white');
+  //       }
+  //
+  //       &[disabled], &[disabled]:hover {
+  //         border-color: $gray-20;
+  //         color: color('white');
+  //       }
+  //     }
+  //
+  //     &.error {
+  //       border: 1px solid $red-30;
+  //       background-color: transparent;
+  //       color: $red-30;
+  //
+  //       &:hover,
+  //       &:active {
+  //         border: 1px solid $red-70;
+  //         background-color: $red-70;
+  //         color: color('white');
+  //       }
+  //
+  //       &[disabled]:hover {
+  //         background-color: transparent;
+  //         color: $red-30;
+  //       }
+  //     }
+  //
+  //     &.delete {
+  //       background-color: $red-50;
+  //       color: color('white');
+  //
+  //       &:hover {
+  //         background-color: $red-40;
+  //       }
+  //       &:active, &:focus {
+  //         background-color: $red-30;
+  //       }
+  //
+  //       &[disabled], &[disabled]:hover {
+  //         background-color: $cool-gray-20;
+  //       }
+  //     }
+  //
+  //     &.link,
+  //     &.icon,
+  //     &.close {
+  //       color: $primary-color-50;
+  //
+  //       &:hover,
+  //       &:active {
+  //         color: $cool-gray-50;
+  //       }
+  //
+  //       &[disabled], &[disabled]:hover {
+  //         color: $cool-gray-30;
+  //       }
+  //     }
+  //
+  //     &.link {
+  //       color: $primary-color-20;
+  //
+  //       &[disabled], &[disabled]:hover {
+  //         color: $cool-gray-20;
+  //       }
+  //     }
+  //   }
+  // }
+}

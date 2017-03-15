@@ -1,0 +1,24 @@
+{
+  "name": "ibmwatson-common-ui-bower",
+  "description": "Bower ditribution of IBM Watson Common UI",
+  "main": "index.js",
+  "authors": [
+    "mchebib"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "ibm",
+    "watson",
+    "ui",
+    "bower"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

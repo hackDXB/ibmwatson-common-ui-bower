@@ -1,0 +1,37 @@
+// Accordion
+.watson {
+  uib-accordion {
+    .panel:last-child {
+      border-bottom: 1px solid color('gray', 20);
+    }
+
+    .accordion-toggle {
+      display: block;
+      padding: 1.2em 1.5em 1em;
+      background-color: $primary-background-color;
+      border-top: 1px solid color('gray', 20);
+      color: $primary-text-color;
+
+      .text-muted {
+        color: color('gray', 30);
+      }
+
+      &:hover,
+      &:focus {
+        border-bottom: none;
+        background-color: color('gray', 20);
+      }
+    }
+
+    .collapse {
+      display: none;
+
+      &.in {
+        display: block;
+        border: 1px solid color('gray', 10);
+        border-bottom: none;
+        padding: 1.5em;
+      }
+    }
+  }
+}
