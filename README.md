@@ -1,3 +1,3 @@
-# ibmwatson-common-ui
+# ibmwatson-common-ui-bower
 
-Current release: 0.1.3
+Current release: 0.1.0

@@ -1,7 +1,6 @@
 {
   "name": "ibmwatson-common-ui-bower",
   "description": "Bower ditribution of IBM Watson Common UI",
-  "main": "index.js",
   "authors": [
     "mchebib"
   ],
